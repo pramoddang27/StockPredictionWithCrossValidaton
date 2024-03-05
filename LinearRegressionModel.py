@@ -27,15 +27,15 @@ def create_linear_reg(df):
 # Let’s calculate the training and testing mean absolute errors for our model.
 # The mean absolute error is the average of the absolute differences between predictions and actual values.
 def evaluate_model(y_test, y_pred):
-    mse = mean_squared_error(y_test, y_pred)
-    mae = mean_absolute_error(y_test, y_pred)
-
-    # R2 score
-    r2 = r2_score(y_test, y_pred)
-
-    print("R2 Score: ", r2)
-    print("Mean Squared Error: ", mse)
-    print("Mean Absolute Error: ", mae)
+    # mse = mean_squared_error(y_test, y_pred)
+    # mae = mean_absolute_error(y_test, y_pred)
+    #
+    # # R2 score
+    # r2 = r2_score(y_test, y_pred)
+    #
+    # print("R2 Score: ", r2)
+    # print("Mean Squared Error: ", mse)
+    # print("Mean Absolute Error: ", mae)
 
     df_pred = pd.DataFrame({"Actual": y_test, "Predicted": y_pred})
     df_pred.reset_index(inplace=True)
