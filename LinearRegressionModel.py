@@ -42,12 +42,12 @@ def evaluate_model(y_test, y_pred):
     return df_pred
 
 # Now let’s plot the actual and predicted values to see how well our model is performing.
-def plot_model(df_pred):
-    plt.figure(figsize=(10, 5))
-    plt.plot(df_pred["Actual"], label="Actual")
-    plt.plot(df_pred["Predicted"], label="Predicted")
-    plt.title("Actual vs Predicted")
-    plt.legend()
-    plt.show()
+# def plot_model(df_pred):
+#     plt.figure(figsize=(10, 5))
+#     plt.plot(df_pred["Actual"], label="Actual")
+#     plt.plot(df_pred["Predicted"], label="Predicted")
+#     plt.title("Actual vs Predicted")
+#     plt.legend()
+#     plt.show()
 
 
