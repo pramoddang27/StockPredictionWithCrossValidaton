@@ -33,10 +33,6 @@ def evaluate_model(y_test, y_pred):
     # R2 score
     r2 = r2_score(y_test, y_pred)
 
-    #print("R2 Score: ", r2)
-    #print("Mean Squared Error: ", mse)
-    #print("Mean Absolute Error: ", mae)
-
     df_pred = pd.DataFrame({"Actual": y_test, "Predicted": y_pred})
     df_pred.reset_index(inplace=True)
-    return df_pred
+    return mse, mae, r2,df_pred
