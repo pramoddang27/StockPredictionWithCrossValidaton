@@ -18,7 +18,9 @@ if __name__ == "__main__":
     df_pred = evaluate_model(y_test, y_pred)
     print(df_pred.head(5))
 
-    fig = px.line(df_pred, x="Date", y=["Actual", "Predicted"],color="variable",
-                  title="Linear Regression Model: Actual Prices vs. Predicted Prices.")
-    fig.show()
+    #fig = px.line(df_pred, x="Date", y=["Actual", "Predicted"],color="variable",
+                  #title="Linear Regression Model: Actual Prices vs. Predicted Prices.")
+    #fig.show()
+
+    plot_model(df_pred)
 

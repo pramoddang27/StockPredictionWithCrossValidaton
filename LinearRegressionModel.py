@@ -4,7 +4,7 @@ from main import *
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
-
+import matplotlib.pyplot as plt
 
 
 def create_linear_reg(df):
@@ -33,6 +33,21 @@ def evaluate_model(y_test, y_pred):
     # R2 score
     r2 = r2_score(y_test, y_pred)
 
+    print("R2 Score: ", r2)
+    print("Mean Squared Error: ", mse)
+    print("Mean Absolute Error: ", mae)
+
     df_pred = pd.DataFrame({"Actual": y_test, "Predicted": y_pred})
     df_pred.reset_index(inplace=True)
-    return mse, mae, r2,df_pred
+    return df_pred
+
+# Now let’s plot the actual and predicted values to see how well our model is performing.
+def plot_model(df_pred):
+    plt.figure(figsize=(10, 5))
+    plt.plot(df_pred["Actual"], label="Actual")
+    plt.plot(df_pred["Predicted"], label="Predicted")
+    plt.title("Actual vs Predicted")
+    plt.legend()
+    plt.show()
+
+
